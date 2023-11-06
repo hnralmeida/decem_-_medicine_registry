@@ -1,0 +1,25 @@
+{
+    "applicationId": "com.example.application",
+    "applicationName": "Demo application",
+    "settings": [
+        {
+            "id": "debug",
+            "name": "Debug mode",
+            "description": "Enable debug mode by displaying logs on screen",
+            "value": {
+                "type": "bool",
+                "default": false
+            }
+        }
+    ],
+    "logo": "logo.png",
+    "apiVersion": {
+        "target": "1",
+        "minimum": "1"
+    },
+    "permissions": [
+        "ACTIVE_OPERATION_READ",
+        "SETTINGS_READ",
+        "DISPLAY_MODE_READ"
+    ]
+}
