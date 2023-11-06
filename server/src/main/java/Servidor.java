@@ -36,8 +36,8 @@ public class Servidor {
             this.socket = socket;
         }
 
-        //LISTA TODOS OS PACIENTES
-        public void lista_pacientes(ObjectOutputStream oos) throws IOException {
+        //FUNÇÃO PARA LISTAR PACIÊNTES
+        public void listaPacientes(ObjectOutputStream oos) throws IOException {
             for (Paciente paciente : pacientes) {
                 oos.writeObject("Sintomas: " + paciente.getSintomas() + " | Diagnóstico: " + paciente.getDiagnostico());
             }
@@ -46,7 +46,7 @@ public class Servidor {
         }
 
         //LISTA TODOS OS PACIENTES QUE TEM X DIAGNOSTICO
-        public void lista_pacientes_por_diagnostico(ObjectOutputStream oos, String tipoDiagnostico) throws IOException {
+        public void listaPacientesPorDiagnostico(ObjectOutputStream oos, String tipoDiagnostico) throws IOException {
             boolean pacientesEncontrados = false;
 
             for (Paciente paciente : pacientes) {
@@ -66,7 +66,7 @@ public class Servidor {
         }
 
         //ALGORITMO WISARD
-        private static String wisard_diagnostico(String[] sintomas) {
+        private static String wisardDiagnostico(String[] sintomas) {
             List<String> conjuntoSintomas = Arrays.asList(sintomas);
             String diagnostico = "";
             
@@ -149,12 +149,12 @@ public class Servidor {
                     if (inputObject instanceof String) {
                         String command = (String) inputObject;
                         if (command.equals("listar")) { //LISTA TODOS
-                            lista_pacientes(oos);
+                            listaPacientes(oos);
                             oos.flush();
                             break;
                         } else if (command.equals("pesquisar")) { //LISTA COM X DIAGNOSTICO
                             String tipoDiagnostico = (String) ois.readObject();
-                            lista_pacientes_por_diagnostico(oos, tipoDiagnostico);
+                            listaPacientesPorDiagnostico(oos, tipoDiagnostico);
                             oos.flush();
                             break;
                         } else if (command.equals("decem")) { //GERA DIAGNOSTICO COM BASE NO WISARD
