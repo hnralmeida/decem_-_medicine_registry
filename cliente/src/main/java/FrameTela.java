@@ -25,7 +25,15 @@ public class FrameTela extends javax.swing.JFrame {
 
         labelTitulo = new javax.swing.JLabel();
         labelInforme = new javax.swing.JLabel();
-            radio0 = new javax.swing.JRadioButton();
+        jPanel1 = new javax.swing.JPanel();
+        panelDiagnostico = new javax.swing.JScrollPane();
+        textDiagnostico = new javax.swing.JTextArea();
+        labelDiagnostico = new javax.swing.JLabel();
+        btnSave = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        btnLimpar = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        radio0 = new javax.swing.JRadioButton();
         radio1 = new javax.swing.JRadioButton();
         radio2 = new javax.swing.JRadioButton();
         radio3 = new javax.swing.JRadioButton();
@@ -35,62 +43,17 @@ public class FrameTela extends javax.swing.JFrame {
         radio7 = new javax.swing.JRadioButton();
         radio8 = new javax.swing.JRadioButton();
         radio9 = new javax.swing.JRadioButton();
-        btnGerar = new javax.swing.JButton();
-        btnLimpar = new javax.swing.JButton();
-        panelDiagnostico = new javax.swing.JScrollPane();
-        textDiagnostico = new javax.swing.JTextArea();
-        labelDiagnostico = new javax.swing.JLabel();
-        btnDecem = new javax.swing.JButton();
         btnNovo = new javax.swing.JButton();
-        btnSave = new javax.swing.JButton();
+        btnGerar = new javax.swing.JButton();
+        btnDecem = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         labelTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         labelTitulo.setText("Sistema de Diagnostico");
 
-        labelInforme.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        labelInforme.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelInforme.setText("Informe os sintomas do paciente:");
-
-        radio0.setText("Dor de cabeça");
-
-        radio1.setText("Febre");
-
-        radio2.setText("Vômito");
-
-        radio3.setText("Diarreia");
-
-        radio4.setText("Erupção cutânea");
-
-        radio5.setText("Dor de garganta");
-
-        radio6.setText("Náusea");
-
-        radio7.setText("Dor abdominal");
-
-        radio8.setText("Fadiga");
-
-        radio9.setText("Tosse");
-
-        btnGerar.setBackground(new java.awt.Color(61, 117, 229));
-        btnGerar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGerar.setText("GERAR DIAGNOSTICO");
-        btnGerar.setBorderPainted(false);
-        btnGerar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerarActionPerformed(evt);
-            }
-        });
-
-        btnLimpar.setBackground(new java.awt.Color(210, 48, 48));
-        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
-        btnLimpar.setText("LIMPAR CAMPOS");
-        btnLimpar.setBorderPainted(false);
-        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimparActionPerformed(evt);
-            }
-        });
 
         textDiagnostico.setColumns(20);
         textDiagnostico.setRows(5);
@@ -99,24 +62,6 @@ public class FrameTela extends javax.swing.JFrame {
 
         labelDiagnostico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         labelDiagnostico.setText("Diagnostico:");
-
-        btnDecem.setBackground(new java.awt.Color(61, 117, 229));
-        btnDecem.setForeground(new java.awt.Color(255, 255, 255));
-        btnDecem.setText("DIAGNOSTICO DECEM");
-        btnDecem.setBorderPainted(false);
-        btnDecem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDecemActionPerformed(evt);
-            }
-        });
-
-        btnNovo.setText("INICIAR NOVO DIAGNOSTICO");
-        btnNovo.setEnabled(false);
-        btnNovo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNovoActionPerformed(evt);
-            }
-        });
 
         btnSave.setBackground(new java.awt.Color(61, 117, 229));
         btnSave.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,101 +73,234 @@ public class FrameTela extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelDiagnostico)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 16, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnSave, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(panelDiagnostico, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(labelDiagnostico)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(panelDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 147, Short.MAX_VALUE)
+                .addComponent(btnSave)
+                .addContainerGap())
+        );
+
+        btnLimpar.setBackground(new java.awt.Color(210, 48, 48));
+        btnLimpar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpar.setText("LIMPAR CAMPOS");
+        btnLimpar.setBorderPainted(false);
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnLimpar)
+                .addGap(120, 120, 120))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnLimpar)
+                .addContainerGap())
+        );
+
+        radio0.setText("Dor de cabeça");
+
+        radio1.setText("Febre");
+
+        radio2.setText("Vômito");
+
+        radio3.setText("Diarreia");
+        radio3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rS3ActionPerformed(evt);
+            }
+        });
+
+        radio4.setText("Erupção cutânea");
+        radio4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rS4ActionPerformed(evt);
+            }
+        });
+
+        radio5.setText("Dor de garganta");
+
+        radio6.setText("Náusea");
+
+        radio7.setText("Dor abdominal");
+        radio7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rS7ActionPerformed(evt);
+            }
+        });
+
+        radio8.setText("Fadiga");
+        radio8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rS8ActionPerformed(evt);
+            }
+        });
+
+        radio9.setText("Tosse");
+        radio9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rS9ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio0)
+                            .addComponent(radio5)
+                            .addComponent(radio9))
+                        .addGap(80, 80, 80)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio1)
+                            .addComponent(radio6)
+                            .addComponent(radio4))
+                        .addGap(31, 31, 31)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(radio2)
+                            .addComponent(radio7)
+                            .addComponent(radio8)))
+                    .addComponent(radio3))
+                .addContainerGap(161, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radio0)
+                    .addComponent(radio2)
+                    .addComponent(radio1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radio5)
+                    .addComponent(radio6)
+                    .addComponent(radio7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(radio9)
+                    .addComponent(radio4)
+                    .addComponent(radio8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(radio3)
+                .addContainerGap(84, Short.MAX_VALUE))
+        );
+
+        btnNovo.setText("INICIAR NOVO DIAGNOSTICO");
+        btnNovo.setEnabled(false);
+        btnNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovoActionPerformed(evt);
+            }
+        });
+
+        btnGerar.setBackground(new java.awt.Color(61, 117, 229));
+        btnGerar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGerar.setText("GERAR DIAGNOSTICO");
+        btnGerar.setBorderPainted(false);
+        btnGerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerarActionPerformed(evt);
+            }
+        });
+
+        btnDecem.setBackground(new java.awt.Color(61, 117, 229));
+        btnDecem.setForeground(new java.awt.Color(255, 255, 255));
+        btnDecem.setText("DIAGNOSTICO DECEM");
+        btnDecem.setBorderPainted(false);
+        btnDecem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDecemActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap(30, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                            .addComponent(btnGerar)
-                            .addGap(50, 50, 50)
-                            .addComponent(btnDecem)
-                            .addGap(50, 50, 50)
-                            .addComponent(btnLimpar)
-                            .addContainerGap())
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(labelInforme)
-                                    .addGap(399, 399, 399))
-                                .addComponent(labelTitulo))
-                            .addGap(224, 224, 224)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panelDiagnostico)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(labelDiagnostico)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(radio0)
-                                            .addComponent(radio5))
-                                        .addGap(80, 80, 80)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(radio1)
-                                            .addComponent(radio6))
-                                        .addGap(80, 80, 80)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(radio2)
-                                            .addComponent(radio7))
-                                        .addGap(80, 80, 80)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(radio3)
-                                            .addComponent(radio8))
-                                        .addGap(80, 80, 80)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(radio9)
-                                            .addComponent(radio4)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(btnNovo)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnSave)))
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(35, 35, 35))))
+                            .addComponent(btnGerar)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addComponent(btnDecem)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnNovo)
+                            .addComponent(labelInforme)
+                            .addComponent(labelTitulo))
+                        .addContainerGap(748, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(labelTitulo)
                 .addGap(18, 18, 18)
                 .addComponent(labelInforme)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(12, 12, 12)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(radio0)
-                            .addComponent(radio2)
-                            .addComponent(radio3)
-                            .addComponent(radio1))
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(radio5)
-                            .addComponent(radio7)
-                            .addComponent(radio8)
-                            .addComponent(radio6)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnDecem)))
+                        .addGap(18, 18, 18)
+                        .addComponent(btnGerar))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(radio4)
-                        .addGap(22, 22, 22)
-                        .addComponent(radio9)))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGerar)
-                    .addComponent(btnLimpar)
-                    .addComponent(btnDecem))
-                .addGap(20, 20, 20)
-                .addComponent(labelDiagnostico)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(panelDiagnostico, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovo)
-                    .addComponent(btnSave))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(185, 185, 185)
+                        .addComponent(btnNovo)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -473,12 +551,35 @@ public class FrameTela extends javax.swing.JFrame {
         btnSave.setEnabled(true);
     }//GEN-LAST:event_btnDecemActionPerformed
 
+    private void rS4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rS4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rS4ActionPerformed
+
+    private void rS9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rS9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rS9ActionPerformed
+
+    private void rS3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rS3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rS3ActionPerformed
+
+    private void rS7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rS7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rS7ActionPerformed
+
+    private void rS8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rS8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rS8ActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGerar;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnDecem;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelDiagnostico;
     private javax.swing.JLabel labelInforme;
     private javax.swing.JLabel labelTitulo;
